@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_nfc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.university_project.nfcActivity"
+    android:background="@color/common_signin_btn_dark_text_disabled">
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+
+        <ImageView
+            android:id="@+id/link_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_backarrow"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:text="@string/nfc_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="11dp"
+            android:id="@+id/link_clear"
+            android:textStyle="bold"
+            android:textIsSelectable="false"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar">
+
+        <ImageView
+            android:id="@+id/image_nfc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/nfc_contents"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/nfc_write"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="14dp"
+            android:clickable="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/nfc_contents"
+            android:hint="@string/nfc_write"
+            android:textColor="@android:color/black"
+            android:textColorHint="?attr/colorButtonNormal" />
+
+        <Button
+            android:text="@string/nfc_write_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nfc_write_btn"
+            android:background="@color/colorPrimaryDark"
+            android:layout_alignBaseline="@+id/nfc_write"
+            android:layout_alignBottom="@+id/nfc_write"
+            android:layout_alignEnd="@+id/nfc_contents" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nfc_contents"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/nfc_write"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
